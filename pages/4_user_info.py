@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 
 st.title("🪪 User Information")
+st.suheader("")
 
 if "email" not in st.session_state:
   st.session_state.email = None
