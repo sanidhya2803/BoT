@@ -18,9 +18,9 @@ else:
     result = response.json()
     
     if "message" in result:
-      col1,col2 = columns(2)
-      col3,col4 = columns(2)
-      col5,col6 = columns(2)
+      col1,col2 = st.columns(2)
+      col3,col4 = st.columns(2)
+      col5,col6 = st.columns(2)
       with col1:
         st.subheader("Name")
       with col2:
