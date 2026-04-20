@@ -16,7 +16,7 @@ else:
     )
   
     result = response.json()
-  
+    st.wrie(type(result))
     st.subheader(f"Name {result['message']['name']}")
     st.subheader(f"Email {result["message"]["email"]}")
     st.subheader(f"Age {result["message"]["age"]}")
