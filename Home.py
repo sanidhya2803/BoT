@@ -74,6 +74,8 @@ for msg in st.session_state.messages:
 col1,col2 = st.columns([10,1],gap="xxsmall")
 with col1:
     user_input = st.chat_input("Enter your query...",disabled=not st.session_state.active_user)
+    if not st.session_state.user:
+        st.warning("Please Login first to access BoT")
 with col2:
     upload_file = st.button("🔗",use_container_width="True",disabled= not st.session_state.active_user)
 
