@@ -203,7 +203,8 @@ st.sidebar.caption("---")
 if st.session_state.active_user:
     col1,col2,col3 = st.sidebar.columns([1,3,1],gap="xsmall")
     with col1:
-        st.button("",icon="👤",use_container_width=True)
+        if st.button("",icon="👤",use_container_width=True):
+            st.switch_page("pages/4_user_info.py")
     with col2:
         st.button(st.session_state.user,use_container_width=True) 
     with col3:
