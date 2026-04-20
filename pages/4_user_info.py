@@ -9,14 +9,16 @@ if "email" not in st.session_state:
 if not st.session_state.active_user:
   st.warning("Please login to access this page!!")
 else:
-  response = requests.get(
-    url="https://bot-wylh.onrender.com/user_info",
-    params = {"email":st.session_state.email}
-  )
-
-  result = response.json()
-
-  st.subheader(f"Name {result['message']['name']}")
-  st.subheader(f"Email {result["message"]["email"]}")
-  st.subheader(f"Age {result["message"]["age"]}")
+  try:
+    response = requests.get(
+      url="https://bot-wylh.onrender.com/user_info",
+      params = {"email":st.session_state.email}
+    )
   
+    result = response.json()
+  
+    st.subheader(f"Name {result['message']['name']}")
+    st.subheader(f"Email {result["message"]["email"]}")
+    st.subheader(f"Age {result["message"]["age"]}")
+  except Exception as e:
+    return e
