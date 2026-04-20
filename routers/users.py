@@ -54,7 +54,21 @@ def login_user(user:schemas.Login_User,db=Depends(dependency.connections)):
         
     else:
         return {"error":"Email not registered!!"}
-        
+
+#---------------------------------------------------------------------User Info-----------------------------------------------------------------------------#
+
+@router.get("/user_info")
+def user_info(email:str,db = Depends(dependency.connect)):
+
+    query = "select email, name, age from users where email = %s"
+
+    db.execute(query,(email,))
+    result = db.fetchone()
+    if result:
+        return {"message":{"email":result["email"],
+                           "name":result["name"],
+                           "age":result["age"]}}
+    
 #---------------------------------------------------------------------Single Query Chat Bot-----------------------------------------------------------------------------#
 @router.post("/chat")
 def user_input(chat:schemas.UserChat):
