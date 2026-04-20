@@ -54,7 +54,7 @@ def login_user(user:schemas.Login_User,db=Depends(dependency.connections)):
         
     else:
         return {"error":"Email not registered!!"}
-
+        
 #---------------------------------------------------------------------Single Query Chat Bot-----------------------------------------------------------------------------#
 @router.post("/chat")
 def user_input(chat:schemas.UserChat):
