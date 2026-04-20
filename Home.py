@@ -193,6 +193,7 @@ if not st.session_state.active_user:
 else:
     if st.sidebar.button("Logout",use_container_width=True):
         st.session_state.active_user = False
+        st.session_state.age = None
         st.session_state.user = None
 
         st.rerun()
