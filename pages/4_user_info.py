@@ -1,11 +1,19 @@
 import streamlit as st
+import requests
 
 st.title("🪪 User Information")
 
 if not st.session_state.active_user:
   st.warning("Please login to access this page!!")
 else:
-  st.subheader(f"Name {None}")
-  st.subheader(f"Email {None}")
-  st.subheader(f"Age {None}")
+  response = requests.get(
+    url="https://bot-wylh.onrender.com/user_info",
+    params = {"email":email}
+  )
+
+  result = response.json()
+
+  st.subheader(f"Name {result["message"]["name"]}")
+  st.subheader(f"Email {result["message"]["email"]}")
+  st.subheader(f"Age {result["message"]["age"]}")
   
