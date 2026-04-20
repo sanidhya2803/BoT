@@ -24,7 +24,7 @@ else:
       with col1:
         st.subheader("Name")
       with col2:
-        st.subheader(result['message']['name'])
+        st.code(result['message']['name'])
       with col3:
         st.subheader("Email")
       with col4:
@@ -32,6 +32,6 @@ else:
       with col5:
         st.subheader("Age")
       with col6:
-        st.subheader(result["message"]["age"])
+        st.code(result["message"]["age"])
   except Exception as e:
      st.write(e)
