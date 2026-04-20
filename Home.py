@@ -81,7 +81,7 @@ if upload_file:
     file = st.file_uploader("Upload your file",["txt","csv","xlsx","pdf","docs"])
     if file:
         response = requests.post(
-            url="http://127.0.0.1:8000/file_upload",
+            url="https://bot-wylh.onrender.com/file_upload",
             files={"file":(file.name, file, file.type)}
         )
         result = response.json()
@@ -93,7 +93,7 @@ if user_input:
     })
 
     response = requests.post(
-        url="http://127.0.0.1:8000/history_chat",
+        url="https://bot-wylh.onrender.com/history_chat",
         json = {"messages":st.session_state.messages}
     )
 
