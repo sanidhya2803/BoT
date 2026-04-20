@@ -22,8 +22,8 @@ else:
       col3,col4 = st.columns(2,gap="xxsmall")
       col5,col6 = st.columns(2,gap="xxsmall")
       with col1:
-        name = "Name"
-        st.code(print(name))
+        name = print("Name")
+        st.code(name)
       with col2:
         st.code(result['message']['name'])
       with col3:
