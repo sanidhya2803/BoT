@@ -96,9 +96,12 @@ if user_input:
         url="https://bot-wylh.onrender.com/history_chat",
         json = {"messages":st.session_state.messages}
     )
-
-    result = response.json()
-
+    if response.text:
+        result = response.json()
+    else:
+        st.error("Server is waking up, please try again in 30 seconds!")
+        st.stop()
+    
     if result.get("response"):
         bot_reply = result.get("response")
     elif result.get("error"):
