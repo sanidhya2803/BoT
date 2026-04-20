@@ -14,7 +14,7 @@ else:
       url="https://bot-wylh.onrender.com/user_info",
       params = {"email":st.session_state.email}
     )
-    st.write(response)
+
     result = response.json()
     st.write(result)
     
