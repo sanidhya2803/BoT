@@ -18,19 +18,19 @@ else:
     result = response.json()
     
     if "message" in result:
-      col1,col2 = st.columns(2,gap="xsmall")
-      col3,col4 = st.columns(2,gap="xsmall")
-      col5,col6 = st.columns(2,gap="xsmall")
+      col1,col2 = st.columns(2,gap="small")
+      col3,col4 = st.columns(2,gap="small")
+      col5,col6 = st.columns(2,gap="small")
       with col1:
         st.code("Name")
       with col2:
         st.code(result['message']['name'])
       with col3:
-        st.subheader("Email")
+        st.code("Email")
       with col4:
         st.code(result["message"]["email"])
       with col5:
-        st.subheader("Age")
+        st.code("Age")
       with col6:
         st.code(result["message"]["age"])
   except Exception as e:
