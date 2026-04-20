@@ -4,7 +4,11 @@ from dependencies import dependency
 from llm import response
 from groq import Groq 
 from openai import Client
-client = Groq(api_key="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")
+import os
+from dotenv import load_dotenv
+load_dotenv()
+GROQ_API_KEY = os.getenv("groq_api_key")
+client = Groq(api_key=GROQ_API_KEY)
 
 router = APIRouter()
 
@@ -95,4 +99,6 @@ async def file_upload(file: UploadFile = File(...)):
         "type": file.content_type,
         "content": len(content)
     }
+
+
         
