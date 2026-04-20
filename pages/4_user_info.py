@@ -16,7 +16,7 @@ else:
     )
   
     result = response.json()
-    st.write(st.seesion_state.email)
+    st.write(st.session_state.email)
     
     if "message" in result:
       st.write("Fahhaaaaa!!")
