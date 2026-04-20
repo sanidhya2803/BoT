@@ -22,15 +22,15 @@ else:
       col3,col4 = st.columns(2,gap="small")
       col5,col6 = st.columns(2,gap="small")
       with col1:
-        st.code("Name")
+        st.code('print("Name")')
       with col2:
         st.code(result['message']['name'])
       with col3:
-        st.code("Email")
+        st.code('print("Email")')
       with col4:
         st.code(result["message"]["email"])
       with col5:
-        st.code("Age")
+        st.code('print("Age")')
       with col6:
         st.code(result["message"]["age"])
   except Exception as e:
