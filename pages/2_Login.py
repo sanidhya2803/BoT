@@ -35,7 +35,7 @@ with col2:
 
 if flag:
     if "user" in result:    
-        st.success(f"Hello {result["user"]["name"]}")
+        st.success(f"Hello {result["user"]}")
 
         st.session_state.user = result["user"]
         st.session_state.active_user = True
