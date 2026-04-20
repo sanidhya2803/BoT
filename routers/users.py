@@ -40,7 +40,7 @@ def register_user(user:schemas.Register_User, db = Depends(dependency.connection
 @router.post("/login_user")
 def login_user(user:schemas.Login_User,db=Depends(dependency.connections)):
 
-    query = "select name,age,password from users where email = %s"
+    query = "select name,password from users where email = %s"
 
     db.execute(query,(user.email,))
     
@@ -48,7 +48,7 @@ def login_user(user:schemas.Login_User,db=Depends(dependency.connections)):
     
     if result:
         if user.password == result["password"]:
-            return {"user":{"name":result["name"],"age":result["age"]}}
+            return {"user":result["name"]}
         else:
             return {"error":"Invalid Password!!"}
         
