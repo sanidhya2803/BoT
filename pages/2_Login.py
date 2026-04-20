@@ -20,12 +20,12 @@ with col1:
             json = {"email":email,"password":password}
         )
 
-if response.text:
-    result = response.json()
-    flag = True
-else:
-    st.error("Server is waking up, please try again in 30 seconds!")
-    st.stop()
+        if response.text:
+            result = response.json()
+            flag = True
+        else:
+            st.error("Server is waking up, please try again in 30 seconds!")
+            st.stop()
     
     
 
