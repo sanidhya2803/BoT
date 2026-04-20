@@ -21,4 +21,4 @@ else:
     st.subheader(f"Email {result["message"]["email"]}")
     st.subheader(f"Age {result["message"]["age"]}")
   except Exception as e:
-    return e
+     st.write(e)
