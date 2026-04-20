@@ -18,8 +18,20 @@ else:
     result = response.json()
     
     if "message" in result:
-      st.subheader(f"Name: {result['message']['name']}")
-      st.subheader(f"Email: {result["message"]["email"]}")
-      st.subheader(f"Age: {result["message"]["age"]}")
+      col1,col2 = columns(2)
+      col3,col4 = columns(2)
+      col5,col6 = columns(2)
+      with col1:
+        st.subheader("Name")
+      with col2:
+        st.subheader(result['message']['name'])
+      with col3:
+        st.subheader("Email")
+      with col4:
+        st.code(result["message"]["email"])
+      with col5:
+        st.subheader("Age")
+      with col6:
+        st.subheader(result["message"]["age"])
   except Exception as e:
      st.write(e)
