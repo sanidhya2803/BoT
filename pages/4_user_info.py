@@ -22,9 +22,9 @@ else:
       col3,col4 = st.columns(2,gap="xxsmall")
       col5,col6 = st.columns(2,gap="xxsmall")
       with col1:
-        st.code(print("Name"))
+        st.code('print("Name")')
       with col2:
-        st.code(print(result['message']['name']))
+        st.code(result['message']['name'])
       with col3:
         st.subheader("Email")
       with col4:
