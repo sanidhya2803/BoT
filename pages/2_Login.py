@@ -38,6 +38,7 @@ if flag:
         st.success(f"Hello {result["user"]}")
 
         st.session_state.user = result["user"]
+        st.seesion_state.email = email
         st.session_state.active_user = True
     elif "error" in result:
         st.error(result["error"])
