@@ -16,6 +16,7 @@ else:
     )
   
     result = response.json()
+    st.write(result)
     
     if "message" in result:
       st.write("Fahhaaaaa!!")
