@@ -16,12 +16,10 @@ else:
     )
 
     result = response.json()
-    st.write(result)
     
     if "message" in result:
-      st.write("Fahhaaaaa!!")
-    st.subheader(f"Name {result['message']['name']}")
-    st.subheader(f"Email {result["message"]["email"]}")
-    st.subheader(f"Age {result["message"]["age"]}")
+      st.subheader(f"Name: {result['message']['name']}")
+      st.subheader(f"Email: {result["message"]["email"]}")
+      st.subheader(f"Age: {result["message"]["age"]}")
   except Exception as e:
      st.write(e)
