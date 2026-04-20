@@ -28,8 +28,12 @@ if submit:
         json={"email":email,"name":name,"age":age,"password":password}
         )
 
+    if response.text:
     result = response.json()
-
+else:
+    st.error("Server is waking up, please try again in 30 seconds!")
+    st.stop()
+    
     if "message" in result:
         st.success(result["message"])
     elif "error" in result:
