@@ -16,7 +16,7 @@ else:
     )
   
     result = response.json()
-    st.write(type(result))
+    
     if "message" in result:
       st.write("Fahhaaaaa!!")
     st.subheader(f"Name {result['message']['name']}")
