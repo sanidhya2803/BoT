@@ -1,5 +1,7 @@
 import streamlit as st
 
+st.title("🪪 User Information")
+
 if not st.session_state.active_user:
   st.warning("Please login to access this page!!")
 else:
