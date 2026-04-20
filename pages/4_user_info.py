@@ -18,9 +18,9 @@ else:
     result = response.json()
     
     if "message" in result:
-      col1,col2 = st.columns(2,gap="xxsmall")
-      col3,col4 = st.columns(2,gap="xxsmall")
-      col5,col6 = st.columns(2,gap="xxsmall")
+      col1,col2 = st.columns(2,gap="xsmall")
+      col3,col4 = st.columns(2,gap="xsmall")
+      col5,col6 = st.columns(2,gap="xsmall")
       with col1:
         st.code("Name")
       with col2:
