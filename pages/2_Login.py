@@ -37,8 +37,7 @@ if flag:
     if "user" in result:    
         st.success(f"Hello {result["user"]["name"]}")
 
-        st.session_state.user = result["user"]["name"]
-        st.session_state.age = result["user"]["age"]
+        st.session_state.user = result["user"]
         st.session_state.active_user = True
     elif "error" in result:
         st.error(result["error"])
