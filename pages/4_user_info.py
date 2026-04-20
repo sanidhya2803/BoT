@@ -3,12 +3,15 @@ import requests
 
 st.title("🪪 User Information")
 
+if "email" not in st.session_state:
+  st.session_state.email = None
+
 if not st.session_state.active_user:
   st.warning("Please login to access this page!!")
 else:
   response = requests.get(
     url="https://bot-wylh.onrender.com/user_info",
-    params = {"email":email}
+    params = {"email":st.session_state.email}
   )
 
   result = response.json()
