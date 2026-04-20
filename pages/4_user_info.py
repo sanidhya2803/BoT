@@ -22,7 +22,7 @@ else:
       col3,col4 = st.columns(2,gap="xxsmall")
       col5,col6 = st.columns(2,gap="xxsmall")
       with col1:
-        st.code("Name")
+        st.code(Name)
       with col2:
         st.code(result['message']['name'])
       with col3:
