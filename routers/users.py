@@ -58,7 +58,7 @@ def login_user(user:schemas.Login_User,db=Depends(dependency.connections)):
 #---------------------------------------------------------------------User Info-----------------------------------------------------------------------------#
 
 @router.get("/user_info")
-def user_info(email:str,db = Depends(dependency.connect)):
+def user_info(email:str,db = Depends(dependency.connections)):
 
     query = "select email, name, age from users where email = %s"
 
