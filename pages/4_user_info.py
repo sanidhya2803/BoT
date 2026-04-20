@@ -24,7 +24,7 @@ else:
       with col1:
         st.code(print("Name"))
       with col2:
-        st.code(result['message']['name'])
+        st.code(print(result['message']['name']))
       with col3:
         st.subheader("Email")
       with col4:
