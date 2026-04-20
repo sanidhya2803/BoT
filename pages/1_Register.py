@@ -24,7 +24,7 @@ with col2:
 
 if submit:
     response = requests.post(
-        url="https://your-app.onrender.com/register_user",            
+        url="http://127.0.0.1:8000/register_user",            
         json={"email":email,"name":name,"age":age,"password":password}
         )
 
