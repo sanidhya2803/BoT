@@ -60,7 +60,7 @@ def login_user(user:schemas.Login_User,db=Depends(dependency.connections)):
 #---------------------------------------------------------------------Update User-----------------------------------------------------------------------------#
 
 @router.patch("/update_user")
-def update_user(email:str, user:Update_User, db = Depends(dependency.connections)):
+def update_user(email:str, user:schemas.Update_User, db = Depends(dependency.connections)):
     
     update = []    
     values = []    
