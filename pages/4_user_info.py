@@ -41,4 +41,14 @@ if st.button("Update"):
   st.write("Only update the fields you want to update")
   st.text_input("Enter your Name")
   st.date_input("Enter your DOB")
-  st.button("Done")
+  if st.button("Done"):
+    response = requests.patch(
+      url="https://bot-wylh.onrender.com/update_user",
+      params = {"email":st.session_state.email}
+    )
+
+    result = response.json()
+    if "message" in result:
+      st.success(result["message"])
+    else:
+      st.error("Any issue occured!!")
