@@ -153,8 +153,9 @@ if user_input:
 
 # st.sidebar.title("")
 
-col1,col2 = st.sidebar.columns([5,5],gap="small")
+st.sidebar.caption("---")
 
+col1,col2 = st.sidebar.columns([5,5],gap="small")
 
 if not st.session_state.active_user:
     with col1:
@@ -171,7 +172,6 @@ else:
 
         st.rerun()
     
-
 st.sidebar.caption("---")
 
 if st.session_state.active_user:
