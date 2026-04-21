@@ -42,9 +42,9 @@ if st.button("Update"):
   age = None
   
   option = st.multiselect("Select the fields you want to update",["Name","Age"])
-  if option == "Name":
+  if "Name" in option:
     name = st.text_input("Enter your Name")
-  if option == "Age":
+  if "Age" in option:
     age = st.number_input("Enter your age")
   
   if st.button("Done"):
