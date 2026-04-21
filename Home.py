@@ -57,7 +57,7 @@ with col5:
 with col6:
     st.button("🔒 Secure", use_container_width=True)
     st.caption("Your data is safe",text_alignment="center")
-st.button("Get Started",width="stretch",icon="🚀")
+# st.button("Get Started",width="stretch",icon="🚀")
 
 
 st.caption("---")
