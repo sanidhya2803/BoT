@@ -45,8 +45,12 @@ option = st.multiselect("Select the fields you want to update",["Name","Age"])
   
 if "Name" in option:
   name = st.text_input("Enter your Name",key="name")
+  if not name:
+    st.warning("Please fill the selected field!!")
 if "Age" in option:
   age = st.number_input("Enter your age",key="age")
+  if not age:
+    st.warning("Please fill the selected field!!")
   
 if st.button("Done"):
   response = requests.patch(
