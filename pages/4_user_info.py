@@ -38,9 +38,15 @@ else:
      st.write(e)
 
 if st.button("Update"):
-  st.write("Only update the fields you want to update")
-  name = st.text_input("Enter your Name")
-  age = st.number_input("Enter your age")
+  name = None
+  age = None
+  
+  option = st.multiselect("Select the fields you want to update",["Name","Age"])
+  if option == "Name":
+    name = st.text_input("Enter your Name")
+  if option == "Age":
+    age = st.number_input("Enter your age")
+  
   if st.button("Done"):
     response = requests.patch(
       url="https://bot-wylh.onrender.com/update_user",
