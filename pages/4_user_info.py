@@ -37,7 +37,7 @@ else:
   except Exception as e:
      st.write(e)
 
-update = st.button("Update"):
+update = st.button("Update")
 if update:  
   name = None
   age = None  
