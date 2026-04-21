@@ -122,36 +122,36 @@ if user_input:
 
 # ---------------------SIDEBAR---------------------
 
-col1,col2,col3 = st.sidebar.tabs(["⚡ Quick", "🎯 Guide", "⚙️ Info"])
-with col1:    
-    st.markdown("")
-    st.write("")
-    st.write("")
-    st.write("")
-    st.write("")
-    st.write("")
-    st.write("")
-with col2:
-    st.markdown("### 🎯 How to Use")
-    st.write("1. Type your question below")
-    st.write("2. Use clear instructions")
-    st.write("3. Upload file if needed")
-    st.write("4. Try quick prompts")
-    st.markdown("### 💡 Tips")
-    st.write("✔ Ask specific questions")
-    st.write("✔ Use keywords")
-    st.write("✔ Keep it simple")
-with col3:
-    st.markdown("### ⚙️ Features")
-    st.write("⚡ Fast responses")
-    st.write("🧠 AI-powered answers")
-    st.write("📂 File support")
-    st.write("🔒 Secure usage")
-    st.markdown("### ℹ️ About")
-    st.write("This is a basic AI chatbot UI")
-    st.write("Built using Streamlit")
+# col1,col2,col3 = st.sidebar.tabs(["⚡ Quick", "🎯 Guide", "⚙️ Info"])
+# with col1:    
+#     st.markdown("")
+#     st.write("")
+#     st.write("")
+#     st.write("")
+#     st.write("")
+#     st.write("")
+#     st.write("")
+# with col2:
+#     st.markdown("### 🎯 How to Use")
+#     st.write("1. Type your question below")
+#     st.write("2. Use clear instructions")
+#     st.write("3. Upload file if needed")
+#     st.write("4. Try quick prompts")
+#     st.markdown("### 💡 Tips")
+#     st.write("✔ Ask specific questions")
+#     st.write("✔ Use keywords")
+#     st.write("✔ Keep it simple")
+# with col3:
+#     st.markdown("### ⚙️ Features")
+#     st.write("⚡ Fast responses")
+#     st.write("🧠 AI-powered answers")
+#     st.write("📂 File support")
+#     st.write("🔒 Secure usage")
+#     st.markdown("### ℹ️ About")
+#     st.write("This is a basic AI chatbot UI")
+#     st.write("Built using Streamlit")
 
-st.sidebar.title("")
+# st.sidebar.title("")
 
 st.sidebar.caption("---")
 
