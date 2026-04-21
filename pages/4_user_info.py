@@ -48,15 +48,15 @@ if "Name" in option:
 if "Age" in option:
   age = st.number_input("Enter your age",key="age")
   
-  if st.button("Done"):
-    response = requests.patch(
-      url="https://bot-wylh.onrender.com/update_user",
-      params = {"email":st.session_state.email},
-      json = {"name":name,"age":age}
-    )
+if st.button("Done"):
+  response = requests.patch(
+    url="https://bot-wylh.onrender.com/update_user",
+    params = {"email":st.session_state.email},
+    json = {"name":name,"age":age}
+  )
   
-    result = response.json()
-    if "message" in result:
-      st.success(result["message"])
-    else:
-      st.error("Any issue occured!!")
+  result = response.json()
+  if "message" in result:
+    st.success(result["message"])
+  else:
+    st.error("Any issue occured!!")
