@@ -164,6 +164,3 @@ if st.session_state.active_user:
     with col3:
         if st.button("",icon="⚙️",use_container_width=True):
             st.switch_page("pages/3_Settings.py")
-
-st.sidebar.caption("---")
-
