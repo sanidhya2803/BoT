@@ -45,22 +45,18 @@ option = st.multiselect("Select the fields you want to update",["Name","Age"])
   
 if "Name" in option:
   name = st.text_input("Enter your Name",key="name")
-  if not name:
-    st.warning("Please fill the selected field!!")
 if "Age" in option:
   age = st.number_input("Enter your age",key="age")
-  if not age:
-    st.warning("Please fill the selected field!!")
   
-if st.button("Done"):
-  response = requests.patch(
-    url="https://bot-wylh.onrender.com/update_user",
-    params = {"email":st.session_state.email},
-    json = {"name":name,"age":age}
-  )
-
-  result = response.json()
-  if "message" in result:
-    st.success(result["message"])
-  else:
-    st.error("Any issue occured!!")
+  if st.button("Done"):
+    response = requests.patch(
+      url="https://bot-wylh.onrender.com/update_user",
+      params = {"email":st.session_state.email},
+      json = {"name":name,"age":age}
+    )
+  
+    result = response.json()
+    if "message" in result:
+      st.success(result["message"])
+    else:
+      st.error("Any issue occured!!")
