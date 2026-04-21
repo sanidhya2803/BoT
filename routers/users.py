@@ -12,6 +12,9 @@ client = Groq(api_key=GROQ_API_KEY)
 
 router = APIRouter()
 
+@router.get("/")
+def home():
+    return {"message":"running..."}
 #---------------------------------------------------------------------Register User-----------------------------------------------------------------------------#
 @router.post("/register_user")
 def register_user(user:schemas.Register_User, db = Depends(dependency.connections)):
