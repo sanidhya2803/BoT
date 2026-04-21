@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 
 st.title("🪪 User Information")
-st.subheader("")
 
 if "email" not in st.session_state:
   st.session_state.email = None
@@ -37,7 +36,8 @@ else:
   except Exception as e:
      st.write(e)
 
-st.write("Update Profile")
+st.caption("---")
+st.subheader("Update Profile")
 
 name = None
 age = None  
