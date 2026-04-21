@@ -44,11 +44,19 @@ age = None
 option = st.multiselect("Select the fields you want to update",["Name","Age"])
   
 if "Name" in option:
-  name = st.text_input("Enter your Name",min_length=1)
+  name = st.text_input("Enter your Name")
 if "Age" in option:
-  age = st.number_input("Enter your age",min_value=18)
+  age = st.number_input("Enter your age")
   
 if st.button("Done"):
+  if "Name" in options:
+    if not name or name.strip() == "":
+      st.error("Please fill the field you have selected!!")
+  
+  if "Age" in options:
+    if not age:
+      st.error("Please fill the field you have selected!!")
+      
   response = requests.patch(
     url="https://bot-wylh.onrender.com/update_user",
     params = {"email":st.session_state.email},
