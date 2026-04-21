@@ -36,3 +36,7 @@ else:
         st.code(result["message"]["age"])
   except Exception as e:
      st.write(e)
+
+if st.button("Update"):
+  st.write("Only update the fields you want to update")
+  st.text_input("Enter your Name")
