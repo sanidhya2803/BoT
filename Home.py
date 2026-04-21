@@ -125,6 +125,8 @@ if user_input:
 st.sidebar.title("")
 st.sidebar.title("")
 st.sidebar.title("")
+st.sidebar.title("")
+st.sidebar.title("")
 
 st.sidebar.caption("---")
 
