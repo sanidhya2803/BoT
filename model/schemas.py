@@ -13,7 +13,7 @@ class Login_User(BaseModel):
 
 class Update_User(BaseModel):
     name:Optinal[str]=None
-    age:Optional[str]=None
+    age:Optional[int]=None
     
 class UserChat(BaseModel):
     message:str
