@@ -12,7 +12,7 @@ class Login_User(BaseModel):
     password:str=Field(...,min_length=8,max_length=16)
 
 class Update_User(BaseModel):
-    name:Optinal[str]=None
+    name:Optional[str]=None
     age:Optional[int]=None
     
 class UserChat(BaseModel):
