@@ -52,10 +52,12 @@ if st.button("Done"):
   if "Name" in option:
     if not name or name.strip() == "":
       st.error("Please fill the field you have selected!!")
+      st.stop()
   
   if "Age" in option:
     if not age:
       st.error("Please fill the field you have selected!!")
+      st.stop()
       
   response = requests.patch(
     url="https://bot-wylh.onrender.com/update_user",
