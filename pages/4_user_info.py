@@ -37,11 +37,13 @@ else:
   except Exception as e:
      st.write(e)
 
-if st.button("Update"):
+update = st.button("Update"):
+if update:  
   name = None
-  age = None
+  age = None  
   
   option = st.multiselect("Select the fields you want to update",["Name","Age"])
+  
   if "Name" in option:
     name = st.text_input("Enter your Name")
   if "Age" in option:
