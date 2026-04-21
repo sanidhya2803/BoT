@@ -120,41 +120,17 @@ if user_input:
     
     st.rerun()
 
-
-
-# col1,col2,col3 = st.columns([10,1,1],gap="small")
-# with col1:
-#     input = st.text_input("",label_visibility="collapsed",placeholder="Ask Anything...")
-# with col2:
-#     file = st.button("🔗")
-# with col3:
-#     send = st.button("➤",disabled=not input)
-
-# if file:
-#     st.file_uploader("",["pdf","csv","xlsx","doc","txt"])
-
-# if send:
-#     response = requests.post(
-#         url="http://127.0.0.1:8000/chat",
-#         json = {"message":input}
-#     )
-
-#     result = response.json()
-
-#     st.write(result["message"])
-
-
 # ---------------------SIDEBAR---------------------
 
 col1,col2,col3 = st.sidebar.tabs(["⚡ Quick", "🎯 Guide", "⚙️ Info"])
 with col1:    
-    st.markdown("### ⚡ Quick Prompts")
-    st.write("💬 Explain Python basics")
-    st.write("📊 Give data insights")
-    st.write("🧠 AI vs ML difference")
-    st.write("✍️ Summarize text")
-    st.write("📈 Business ideas")
-    st.write("🧑‍💻 Debug my code")
+    st.markdown("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
 with col2:
     st.markdown("### 🎯 How to Use")
     st.write("1. Type your question below")
