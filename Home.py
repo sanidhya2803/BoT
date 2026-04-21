@@ -127,6 +127,8 @@ st.sidebar.title("")
 st.sidebar.title("")
 st.sidebar.title("")
 st.sidebar.title("")
+st.sidebar.title("")
+st.sidebar.title("")
 
 st.sidebar.caption("---")
 
