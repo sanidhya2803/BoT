@@ -54,6 +54,11 @@ def login_user(user:schemas.Login_User,db=Depends(dependency.connections)):
         
     else:
         return {"error":"Email not registered!!"}
+#---------------------------------------------------------------------Update User-----------------------------------------------------------------------------#
+
+@router.patch("/update_user")
+def update_user("email":str):
+    pass
 
 #---------------------------------------------------------------------User Info-----------------------------------------------------------------------------#
 
