@@ -49,11 +49,11 @@ if "Age" in option:
   age = st.number_input("Enter your age")
   
 if st.button("Done"):
-  if "Name" in options:
+  if "Name" in option:
     if not name or name.strip() == "":
       st.error("Please fill the field you have selected!!")
   
-  if "Age" in options:
+  if "Age" in option:
     if not age:
       st.error("Please fill the field you have selected!!")
       
