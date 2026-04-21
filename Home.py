@@ -153,8 +153,6 @@ if user_input:
 
 # st.sidebar.title("")
 
-st.sidebar.caption("---")
-
 col1,col2 = st.sidebar.columns([5,5],gap="small")
 
 
