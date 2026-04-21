@@ -37,27 +37,26 @@ else:
   except Exception as e:
      st.write(e)
 
-update = st.button("Update")
-if update:  
-  name = None
-  age = None  
-  
-  option = st.multiselect("Select the fields you want to update",["Name","Age"])
-  
-  if "Name" in option:
-    name = st.text_input("Enter your Name",key="name")
-  if "Age" in option:
-    age = st.number_input("Enter your age",key="age")
-  
-  if st.button("Done"):
-    response = requests.patch(
-      url="https://bot-wylh.onrender.com/update_user",
-      params = {"email":st.session_state.email},
-      json = {"name":name,"age":age}
-    )
+st.write("Update Profile")
 
-    result = response.json()
-    if "message" in result:
-      st.success(result["message"])
-    else:
-      st.error("Any issue occured!!")
+name = None
+age = None  
+option = st.multiselect("Select the fields you want to update",["Name","Age"])
+  
+if "Name" in option:
+  name = st.text_input("Enter your Name",key="name")
+if "Age" in option:
+  age = st.number_input("Enter your age",key="age")
+  
+if st.button("Done"):
+  response = requests.patch(
+    url="https://bot-wylh.onrender.com/update_user",
+    params = {"email":st.session_state.email},
+    json = {"name":name,"age":age}
+  )
+
+  result = response.json()
+  if "message" in result:
+    st.success(result["message"])
+  else:
+    st.error("Any issue occured!!")
