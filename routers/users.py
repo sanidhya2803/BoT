@@ -57,9 +57,29 @@ def login_user(user:schemas.Login_User,db=Depends(dependency.connections)):
 #---------------------------------------------------------------------Update User-----------------------------------------------------------------------------#
 
 @router.patch("/update_user")
-def update_user("email":str):
-    pass
+def update_user("email":str, user:Update_User, db = Depends(dependency.connections)):
+    
+    update = []    
+    values = []    
+    
+    if user.name is not None:
+        update.append("name = %s")
+        values.append(user.name)
+    if user.age is not None:
+        update.append("age = %s")
+        values.append(user.age)
 
+    query = f"""
+    update users
+    set {','.join(update)}
+    where email = %s
+    """
+    values.append(email)
+    db.execute(query,tuple(values))
+    db.connection.commit()
+
+    return {"message":"Profil Updated!!"}
+        
 #---------------------------------------------------------------------User Info-----------------------------------------------------------------------------#
 
 @router.get("/user_info")
