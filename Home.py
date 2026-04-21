@@ -122,7 +122,8 @@ if user_input:
 
 # ---------------------SIDEBAR---------------------
 
-st.sidebar.title("")
+st.sidebar.caption("---")
+
 st.sidebar.title("")
 st.sidebar.title("")
 st.sidebar.title("")
